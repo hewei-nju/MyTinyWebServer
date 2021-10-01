@@ -64,28 +64,28 @@ cmake --build .
 
 运行脚本./start.sh:
 
-```sh
-#!/usr/bin/env sh
-
-# 下载编译
-git clone https://github.com/hewei-nju/MyTinyWebServer.git
-cd MyTinyWebServer
-make all
-
-# 默认在8080端口运行httpd服务
-echo "Usage: "
-echo "1. ./webserver <IP> <Port>"
-echo "2. ./webserver <Port>"
-./webserver 8080
-
-# 展示可访问的链接
-echo "http://localhost:8080"
-echo "http://localhost:8080/post.html"
-```
+[start.sh](./start.sh);
 
 ### 2. 手动启动
 
+* `git clone https://github.com/hewei-nju/MyTinyWebServer.git`;
+* `cd MyTinyWebServer`;
+* `make all`;
+* `sudo chmod 755 cgi/post.html`;
+* `./webserver 8080`;
+* 虚拟机的浏览器中输入：`http://localhost:8080/post.html`;
 
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001210610860.png" alt="image-20211001210610860" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001210640402.png" alt="image-20211001210640402" style="zoom: 90%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001210719891.png" alt="image-20211001210719891" style="zoom:90%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001210748513.png" alt="image-20211001210748513" style="zoom:90%;" />
+
+**注意**：
+
+* 如果有运行问题，则你可能需要更改文件权限，具体怎么修改要根据你使得这些文件有什么权限之后，stfw。
 
 ## 5. 工作流程图
 
