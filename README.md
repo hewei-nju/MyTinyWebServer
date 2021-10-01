@@ -66,6 +66,14 @@ cmake --build .
 
 [start.sh](./start.sh);
 
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001211736679.png" alt="image-20211001211736679" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001211808654.png" alt="image-20211001211808654" style="zoom:90%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001211832237.png" alt="image-20211001211832237" style="zoom:90%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/hewei-nju/PictureBed@main/img/image-20211001211859504.png" alt="image-20211001211859504" style="zoom:90%;" />
+
 ### 2. 手动启动
 
 * `git clone https://github.com/hewei-nju/MyTinyWebServer.git`;
