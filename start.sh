@@ -5,12 +5,8 @@ git clone https://github.com/hewei-nju/MyTinyWebServer.git
 cd MyTinyWebServer
 make all
 
-# 修改httpdocs下文件的可读写权限
-sudo chmod 666 httpdocs/post.html httpdocs/readme.html
-# 修改cgi下脚本的可执行权限
+# 修改cgi目录下文件权限，允许可执行 
 sudo chmod 755 cgi/post.cgi
-# 修改files目录的可读写权限
-sudo chmod 666 files
 
 # 展示可访问的链接
 echo "你可能访问需要使用的链接："
@@ -22,4 +18,3 @@ echo "Usage: "
 echo "1. ./webserver <IP> <Port>"
 echo "2. ./webserver <Port>"
 ./webserver 8080
-
