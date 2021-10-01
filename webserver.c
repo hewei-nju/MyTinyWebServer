@@ -158,7 +158,7 @@ void handle_request(void *pclnt) {
     strcpy(buf, line);
     free(line);
 
-    if (len < 0)
+    if (!feof(file) && len < 0)
         error_handling("getline()");
 
     //!!! fclose会将clnt全关闭！踩得坑！果然认真学过的东西还是忘的飞快！好在排坑时想起来了。留下这个注释是为了提示自己和大家！
@@ -187,11 +187,11 @@ void handle_request(void *pclnt) {
 
     // html文件存放在httpdocs中，cgi脚本存放在cgi目录中
     if (strlen(url) > 4 && strncmp(url, "/cgi", 4) == 0)
-        sprintf(path, "/home/bright/GitRepo/MyTinyWebServer%s", url);
+        sprintf(path, "%s", url + 1);
     else if (strlen(url) > 6 && strncmp(url, "/files", 6) == 0)
-        sprintf(path, "/home/bright/GitRepo/MyTinyWebServer%s", url);
+        sprintf(path, "%s", url + 1);
     else
-        sprintf(path, "/home/bright/GitRepo/MyTinyWebServer/httpdocs%s", url);
+        sprintf(path, "httpdocs%s", url);
 
     // 如果用户只输入了IP + Port，并没有指定HTML文件，我们默认展示readme.html
     if (path[strlen(path) - 1] == '/')
@@ -560,7 +560,7 @@ void execute_cgi(int clnt, FILE *fp, const char *path, const char *method, const
             char data[BUF_SIZE];
             memset(data, 0, sizeof(data));
             char filepath[PATH_SIZE];
-            strcpy(filepath, "/home/bright/GitRepo/MyTinyWebServer/files/");
+            strcpy(filepath, "files/");
 
             const char *CONTENT_DISPOSITION = "Content-Disposition: form-data;";
 
