@@ -158,6 +158,8 @@ void handle_request(void *pclnt) {
     strcpy(buf, line);
     free(line);
 
+    // TODO: 程序经常出现段错误，发现是getline问题！(FIXIED)
+    //! getline在读取错误和文件已达eof均会返回-1。
     if (!feof(file) && len < 0)
         error_handling("getline()");
 
