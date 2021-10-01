@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h2>注册信息</h2>
+    <!--  你可以将enctype去掉，同时注意在编译webserver.c时，将宏APPLICATION_X_WWW_URLENCODED定义为1，宏MULTIPART_FORM_DATA定义为0 -->
+    <form enctype="multipart/form-data" action="../cgi/post.cgi" method="POST">
+        账号：<input type="text" name="user" value="" size="11" maxlength="11">
+        <br>
+        <br>
+        密码：<input type="password" value="" name="password" size="11">
+        <br>
+        <br>
+        爱好：<input type="checkbox" name="PE" checked="checked">体育<input type="checkbox" name="singing">唱歌
+        <br>
+        <br>
+        性别：<input type="radio" name="sex" checked="checked">男<input type="radio" name="sex">女
+        <br>
+        <br>
+        地址：
+        <select name="address">
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广州</option>
+            <option value="shenzhen">深圳</option>
+        </select>
+        <br>
+        <br>
+        自我介绍：
+        <br>
+        <textarea cols="35" rows="10" name="introduction">
+			</textarea>
+        <br>
+        <br>
+        <input type="file" name="usrfile">
+        <br>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+</div>
+</body>
+</html>
