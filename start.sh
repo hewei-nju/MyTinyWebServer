@@ -9,6 +9,13 @@ make all
 sudo chmod 666 httpdocs/post.html httpdocs/readme.html
 # 修改cgi下脚本的可执行权限
 sudo chmod 755 cgi/post.cgi
+# 修改files目录的可读写权限
+sudo chmod 666 files
+
+# 展示可访问的链接
+echo "你可能访问需要使用的链接："
+echo "http://localhost:8080"
+echo "http://localhost:8080/post.html"
 
 # 默认在8080端口运行httpd服务
 echo "Usage: "
@@ -16,6 +23,3 @@ echo "1. ./webserver <IP> <Port>"
 echo "2. ./webserver <Port>"
 ./webserver 8080
 
-# 展示可访问的链接
-echo "http://localhost:8080"
-echo "http://localhost:8080/post.html"
